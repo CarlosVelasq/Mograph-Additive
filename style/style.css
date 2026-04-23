@@ -1,0 +1,187 @@
+#imgTopBg {
+  top: 0;
+  z-index: -20;
+  position: absolute;
+  overflow: hidden;
+  height: 42rem;
+  width: 100vw;
+  display: flex;
+  animation: heroReveal 1s ease both;
+}
+
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    clip-path: inset(0 0 8% 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0% 0);
+  }
+}
+
+#imgTopBg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+#titleTopBG {
+  top: 0;
+  z-index: -20;
+  position: absolute;
+  overflow: hidden;
+  height: 42rem;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: 8rem;
+}
+
+#titleTopBG h1 {
+  margin: 0;
+  text-shadow: 2px 3px 6px rgba(0, 0, 0);
+  font-family: "Corby", sans-serif;
+  font-size: 6rem;
+  font-weight: 100;
+  animation: fadeUp 0.7s 0.25s ease both;
+}
+
+#titleTopBG h2 {
+  margin: 0;
+  text-shadow: 2px 3px 6px rgba(0, 0, 0);
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  animation: fadeUp 0.7s 0.45s ease both;
+}
+
+section#allTxt {
+  margin-top: 42rem;
+  margin-inline: 16%;
+  overflow-y: hidden;
+  animation: fadeUp 0.6s 0.6s ease both;
+}
+
+#allTxt h1 {
+  font-family: "Corby", sans-serif;
+  font-weight: 100;
+  font-size: 3rem;
+}
+
+.turGrid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.turIMG:nth-child(1) {
+  animation: fadeUp 0.55s 0.65s ease both;
+}
+.turIMG:nth-child(2) {
+  animation: fadeUp 0.55s 0.75s ease both;
+}
+.turIMG:nth-child(3) {
+  animation: fadeUp 0.55s 0.85s ease both;
+}
+.turIMG:nth-child(4) {
+  animation: fadeUp 0.55s 0.95s ease both;
+}
+.turIMG:nth-child(5) {
+  animation: fadeUp 0.55s 1.05s ease both;
+}
+.turIMG:nth-child(6) {
+  animation: fadeUp 0.55s 1.15s ease both;
+}
+.turIMG:nth-child(7) {
+  animation: fadeUp 0.55s 1.25s ease both;
+}
+.turIMG:nth-child(8) {
+  animation: fadeUp 0.55s 1.35s ease both;
+}
+
+.turIMG:nth-child(-n + 2) {
+  height: 18rem;
+  grid-column: span 3 / span 3;
+}
+
+.turIMG {
+  grid-column: span 2 / span 2;
+  height: 14rem;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  outline: solid 2px transparent;
+  transition:
+    outline-color 0.3s ease-in-out,
+    transform 0.3s ease;
+}
+
+.turIMG:hover {
+  outline-color: #fff;
+  transform: translateY(-3px);
+}
+
+.turIMG:active {
+  transform: scale(0.98);
+}
+
+.turIMG::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 20%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.turIMG h3 {
+  z-index: 20;
+  text-align: left;
+  position: absolute;
+  font-size: 1.4rem;
+  top: 0;
+  left: 0;
+  margin: 25px;
+  margin-right: 100px;
+  font-weight: normal;
+  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.7);
+  transition: letter-spacing 0.3s ease;
+}
+
+.turIMG:hover h3 {
+  letter-spacing: 0.03em;
+}
+
+.turIMG img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 350ms ease-in-out;
+  will-change: transform;
+}
+
+.turIMG:hover img {
+  transform: scale(1.06);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

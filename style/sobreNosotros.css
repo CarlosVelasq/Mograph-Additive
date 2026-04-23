@@ -1,0 +1,145 @@
+#imgTopBg {
+  top: 0;
+  z-index: -20;
+  position: absolute;
+  overflow: hidden;
+  height: 24rem;
+  width: 100vw;
+  display: flex;
+  animation: heroReveal 0.9s ease both;
+}
+
+#imgTopBg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+#titleTopBG {
+  top: 0;
+  z-index: -20;
+  position: absolute;
+  overflow: hidden;
+  height: 24rem;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: 8rem;
+}
+
+#titleTopBG h1 {
+  margin: 0;
+  text-shadow: 2px 3px 6px rgba(0, 0, 0);
+  font-family: "Corby", sans-serif;
+  font-size: 6rem;
+  font-weight: 100;
+  animation: fadeUp 0.65s 0.2s ease both;
+}
+
+section#allTxt {
+  margin-top: 24rem;
+  margin-inline: 12%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+  align-items: center;
+}
+
+.info {
+  animation: fadeUp 0.6s 0.4s ease both;
+}
+
+.info h2 {
+  font-size: 3rem;
+}
+
+.info p {
+  font-size: 1.2rem;
+}
+
+.Images {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  justify-items: center;
+  gap: 4rem;
+}
+
+.Images a:nth-child(1) {
+  animation: fadeUp 0.5s 0.5s ease both;
+}
+.Images a:nth-child(2) {
+  animation: fadeUp 0.5s 0.65s ease both;
+}
+.Images a:nth-child(3) {
+  animation: fadeUp 0.5s 0.8s ease both;
+}
+.Images a:nth-child(4) {
+  animation: fadeUp 0.5s 0.95s ease both;
+}
+
+.Images a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  width: fit-content;
+  gap: 1rem;
+  text-decoration: none;
+}
+
+.Images a div {
+  position: relative;
+  height: 15rem;
+  width: 15rem;
+}
+
+.Images img {
+  border-radius: 1.8rem;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+  will-change: transform;
+}
+
+.Images img:hover {
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+.Images h4 {
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: letter-spacing 0.3s ease;
+}
+
+.Images a:hover h4 {
+  letter-spacing: 0.03em;
+}
+
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    clip-path: inset(0 0 8% 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0% 0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

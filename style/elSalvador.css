@@ -1,0 +1,136 @@
+#imgTopBg {
+  top: 0;
+  z-index: -20;
+  position: absolute;
+  overflow: hidden;
+  height: 24rem;
+  width: 100vw;
+  display: flex;
+  animation: heroReveal 0.9s ease both;
+}
+
+#imgTopBg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+#titleTopBG {
+  top: 0;
+  z-index: -20;
+  position: absolute;
+  overflow: hidden;
+  height: 24rem;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: 8rem;
+}
+
+#titleTopBG h1 {
+  margin: 0;
+  text-shadow: 2px 3px 6px rgba(0, 0, 0);
+  font-family: "Corby", sans-serif;
+  font-size: 6rem;
+  font-weight: 100;
+  animation: fadeUp 0.65s 0.2s ease both;
+}
+
+section#allTxt {
+  margin-top: 24rem;
+  margin-inline: 12%;
+  overflow-y: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+  align-items: center;
+  animation: fadeUp 0.55s 0.45s ease both;
+}
+
+.Images {
+  display: grid;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  grid-auto-flow: column;
+  justify-content: stretch;
+  max-height: 32rem;
+  gap: 0.5rem;
+}
+
+.Images div:last-child {
+  grid-column: span 3 / span 3;
+  grid-row: span 3 / span 3;
+}
+
+.Images div {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 0.8rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.Images div:nth-child(1) {
+  animation: fadeIn 0.5s 0.55s ease both;
+}
+.Images div:nth-child(2) {
+  animation: fadeIn 0.5s 0.68s ease both;
+}
+.Images div:nth-child(3) {
+  animation: fadeIn 0.5s 0.81s ease both;
+}
+.Images div:nth-child(4) {
+  animation: fadeIn 0.5s 0.94s ease both;
+}
+
+.Images div:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.Images div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 350ms ease-in-out,
+    filter 350ms ease;
+  will-change: transform;
+}
+
+.Images div:hover img {
+  transform: scale(1.06);
+  filter: brightness(1.08);
+}
+
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    clip-path: inset(0 0 8% 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0% 0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

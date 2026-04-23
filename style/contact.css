@@ -1,0 +1,112 @@
+#imgTopBg {
+  top: 0;
+  z-index: -20;
+  position: absolute;
+  overflow: hidden;
+  height: 24rem;
+  width: 100vw;
+  display: flex;
+  animation: heroReveal 0.9s ease both;
+}
+
+#imgTopBg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+#titleTopBG {
+  top: 0;
+  z-index: -20;
+  position: absolute;
+  overflow: hidden;
+  height: 24rem;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: 8rem;
+}
+
+#titleTopBG h1 {
+  margin: 0;
+  text-shadow: 2px 3px 6px rgba(0, 0, 0);
+  font-family: "Corby", sans-serif;
+  font-size: 6rem;
+  font-weight: 100;
+  animation: fadeUp 0.65s 0.2s ease both;
+}
+
+section#allTxt {
+  margin-top: 24rem;
+  margin-inline: 12%;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: center;
+  animation: fadeUp 0.6s 0.4s ease both;
+}
+
+#allTxt img {
+  position: relative;
+  height: auto;
+  width: 20rem;
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
+  filter: brightness(0.9);
+}
+
+#allTxt img:hover {
+  transform: scale(1.03) rotate(-1deg);
+  filter: brightness(1);
+}
+
+.cntct {
+  border: solid 5px #fff;
+  border-radius: 20px;
+  padding: 1.2rem;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.cntct:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3px);
+}
+
+.cntct p {
+  font-weight: 300;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.cntct h3 {
+  font-size: 2rem;
+}
+
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    clip-path: inset(0 0 8% 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0% 0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
