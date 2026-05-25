@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" href="../images/icon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Jaldi:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/register.css">
+    <script src="../javaScript/validReg.js"></script>
+    <title>Crear Cuenta</title>
+</head>
+<body>
+    <!--Object Principal-->
+    <div class="topBG"></div>
+    <!-- Logo -->
+    <div class="estudio">
+        <a href="../html/index.html">
+          <img src="../images/WNISV White.png" alt="Where Next?">
+        </a>
+    </div>
+    <!-- Cuadro con el degradado y el form -->
+    <div class="blurBG"></div>
+
+    <div class="baseInfo">
+        <div class="info">
+            <h1>Crea Una Cuenta</h1>
+            <form action="../javaScript/reg.php" method="POST" onsubmit="return validar();">
+                <input name="usuario" id="usu" type="text" placeholder="Nombre de Usuario">
+                    <p id="errorU">Usuario Requerido</p>
+                    <p id="errorUS">Usuario NO Válido</p>
+                <br>
+                <br>
+                <br>
+                <input name="email" id="em" type="email" placeholder="Correo Electronico">
+                    <p id="errorE">Correo Electronico Requerido</p>
+                    <p id="errorEM">Correo Electronico NO Válido</p>
+                <br>
+                <br>
+                <br>
+                <input name="contra" id="contra" type="password" placeholder="Contraseña">
+                    <p id="errorC">Contraseña Requerida</p>
+                    <p id="errorCO">Contraseña debe ser mayor a 8 digitos y menor a 16</p>
+                    <p id="errorCON">Contraseña NO Válida</p>
+                <br>
+                <br>
+                <br>
+                <input name="confirmar" id="contr" type="password" placeholder="Confirmar Contraseña">
+                    <p id="errorP">Confirmar Contraseña Requerida</p>
+                    <p id="errorPA">Debe ser igual a la Contraseña</p>
+                <br>
+                <br>
+                <br>
+                <button>Siguiente</button>
+            </form>
+            <!-- Cambio de coso-->
+                <br>
+                <br>
+                <br>
+            <p>¿Ya tienes una cuenta?   <a href="../index.html" id="cambiar">Iniciar Sesión</a></p>
+        </div>
+    </div>
+    <!-- Regresar -->
+    <div class="back">
+        <a href="../html/index.php"><button>⤬</button></a>
+    </div>
+</body>
+</html>
+
+    
